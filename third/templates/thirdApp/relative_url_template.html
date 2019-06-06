@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "thirdApp/basic.html" %}
+
+{% block body_block %}
+  {% load staticfiles %}
+
+    <h1>WELCOME TO RELATIVE_URL_TEMPLATE PAGE!</h1>
+    <a href="{% url 'thirdApp:page_1' %}">Back to other page</a>
+    <br>
+    <a href="{% url 'homepage' %}">Link to home page</a>
+    <br>
+    <a href="{% url 'admin:index' %}"><img src="{% static 'images/admin.jpg' %}" alt="ups,not found" width="150" height="110" border="3"></a>
+
+{% endblock %}
